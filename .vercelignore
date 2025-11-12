@@ -1,0 +1,14 @@
+/vendor
+/node_modules
+/storage
+/bootstrap/cache
+.env
+.env.*
+.git
+.gitignore
+.gitattributes
+tests
+phpunit.xml
+*.log
+test-*.php
+react-frontend
