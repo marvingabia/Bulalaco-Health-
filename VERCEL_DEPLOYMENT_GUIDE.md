@@ -1,7 +1,7 @@
 # 🚀 Vercel Deployment Guide - Bulalacao Health Hub
 
 ## ✅ GitHub Repository
-Your code is now pushed to: https://github.com/marvingabia/Bulalaco-Health--hub
+Your code is now pushed to: https://github.com/marvingabia/Bulalaco-Health-
 
 ## 📱 Mobile Responsive Design
 All pages are fully responsive using Tailwind CSS:
@@ -16,7 +16,7 @@ All pages are fully responsive using Tailwind CSS:
 
 1. **Go to Vercel**: https://vercel.com
 2. **Import Project**: Click "Add New" → "Project"
-3. **Select Repository**: Choose `Bulalaco-Health--hub`
+3. **Select Repository**: Choose `Bulalaco-Health-`
 4. **Configure Project**:
    - Framework Preset: `Other`
    - Root Directory: `./` (root)
@@ -50,7 +50,7 @@ All pages are fully responsive using Tailwind CSS:
 ### Part 2: Deploy Frontend (React)
 
 1. **Import Again**: Click "Add New" → "Project"
-2. **Select Same Repository**: Choose `Bulalaco-Health--hub`
+2. **Select Same Repository**: Choose `Bulalaco-Health-`
 3. **Configure Project**:
    - Framework Preset: `Vite`
    - Root Directory: `react-frontend`
@@ -159,7 +159,7 @@ If you encounter issues:
 
 ---
 
-**Your Repository**: https://github.com/marvingabia/Bulalaco-Health--hub
+**Your Repository**: https://github.com/marvingabia/Bulalaco-Health-
 **Vercel Dashboard**: https://vercel.com/dashboard
 
 Good luck with deployment! 🎉

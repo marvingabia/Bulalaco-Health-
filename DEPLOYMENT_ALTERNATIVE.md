@@ -19,7 +19,7 @@ Laravel on Vercel can be tricky. Here are **EASIER** deployment options:
 1. **Go to Railway**: https://railway.app
 2. **Sign up** with GitHub
 3. **New Project** → **Deploy from GitHub repo**
-4. **Select**: `Bulalaco-Health--hub`
+4. **Select**: `Bulalaco-Health-`
 5. **Add MySQL**: Click "New" → "Database" → "MySQL"
 6. **Environment Variables** (Railway will auto-detect Laravel):
    ```
@@ -52,7 +52,7 @@ Laravel on Vercel can be tricky. Here are **EASIER** deployment options:
 1. **Go to Render**: https://render.com
 2. **Sign up** with GitHub
 3. **New** → **Web Service**
-4. **Connect**: `Bulalaco-Health--hub`
+4. **Connect**: `Bulalaco-Health-`
 5. **Settings**:
    - Name: `bulalacao-backend`
    - Environment: `PHP`
@@ -203,6 +203,6 @@ SESSION_DOMAIN=.vercel.app
 
 ---
 
-**Repository**: https://github.com/marvingabia/Bulalaco-Health--hub
+**Repository**: https://github.com/marvingabia/Bulalaco-Health-
 
 **Choose the option that works best for you!** 🚀

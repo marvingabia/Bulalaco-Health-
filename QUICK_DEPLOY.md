@@ -12,7 +12,7 @@ Ito ang **PINAKAMADALING** paraan:
 2. **Sign up** gamit ang GitHub account mo
 3. **Click "New Project"**
 4. **Select "Deploy from GitHub repo"**
-5. **Choose**: `Bulalaco-Health--hub`
+5. **Choose**: `Bulalaco-Health-`
 6. **Wait** - Railway will auto-detect Laravel and deploy!
 
 ### Add Database:
@@ -33,7 +33,7 @@ Ito ang **PINAKAMADALING** paraan:
 1. **Pumunta sa**: https://vercel.com
 2. **Sign up** gamit ang GitHub
 3. **Click "Add New"** → **"Project"**
-4. **Import**: `Bulalaco-Health--hub`
+4. **Import**: `Bulalaco-Health-`
 5. **Configure**:
    - **Root Directory**: `react-frontend`
    - **Framework Preset**: Vite
@@ -141,6 +141,6 @@ All features should work perfectly!
 
 ---
 
-**Repository**: https://github.com/marvingabia/Bulalaco-Health--hub
+**Repository**: https://github.com/marvingabia/Bulalaco-Health-
 
 **Enjoy your deployed app!** 🎉

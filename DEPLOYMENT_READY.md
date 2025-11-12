@@ -1,7 +1,7 @@
 # ✅ DEPLOYMENT READY - Bulalacao Health Hub
 
 ## 🎉 GitHub Repository
-**Successfully pushed to:** https://github.com/marvingabia/Bulalaco-Health--hub
+**Successfully pushed to:** https://github.com/marvingabia/Bulalaco-Health-
 
 ## 📱 Mobile Responsive Features ✅
 
@@ -23,7 +23,7 @@
 ### Step 1: Deploy Backend (Laravel API)
 1. Go to https://vercel.com
 2. Click "Add New" → "Project"
-3. Import: `Bulalaco-Health--hub`
+3. Import: `Bulalaco-Health-`
 4. Settings:
    - Root Directory: `./`
    - Framework: Other
@@ -32,7 +32,7 @@
 
 ### Step 2: Deploy Frontend (React)
 1. Click "Add New" → "Project" again
-2. Import same repository: `Bulalaco-Health--hub`
+2. Import same repository: `Bulalaco-Health-`
 3. Settings:
    - Root Directory: `react-frontend`
    - Framework: Vite
@@ -144,7 +144,7 @@ All offer free tiers perfect for this project!
 ## 🎯 Repository Structure
 
 ```
-Bulalaco-Health--hub/
+Bulalaco-Health-/
 ├── app/                    # Laravel backend
 ├── database/              # Migrations & seeders
 ├── routes/                # API routes
@@ -182,5 +182,5 @@ Your project is now:
 
 ---
 
-**Repository:** https://github.com/marvingabia/Bulalaco-Health--hub
+**Repository:** https://github.com/marvingabia/Bulalaco-Health-
 **Status:** Ready for Production Deployment 🚀
