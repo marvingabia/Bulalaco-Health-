@@ -28,6 +28,9 @@ export default function PatientRecords() {
     age: '',
     address: '',
     phone: '',
+    isIndigenousPeople: false,
+    tribe: '',
+    tribeOther: '',
   });
   
   const [recordData, setRecordData] = useState({
@@ -112,6 +115,8 @@ Name: ${patientForm.name}
 Age: ${patientForm.age}
 Address: ${patientForm.address}
 Phone: ${patientForm.phone}
+Indigenous People: ${patientForm.isIndigenousPeople ? 'Yes' : 'No'}
+${patientForm.isIndigenousPeople ? `Tribe: ${patientForm.tribe === 'Other' ? patientForm.tribeOther : patientForm.tribe}` : ''}
 
 COMPLAINT & DIAGNOSIS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -309,6 +314,71 @@ Signature: _________________
               className="w-full px-6 py-3 border-2 border-gray-300 rounded-full focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
+          
+          {/* Indigenous People Status */}
+          <div className="md:col-span-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              Member of Indigenous People (IP)?
+            </label>
+            <div className="flex gap-4">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="isIP"
+                  checked={patientForm.isIndigenousPeople === false}
+                  onChange={() => setPatientForm({ ...patientForm, isIndigenousPeople: false, tribe: '' })}
+                  className="w-5 h-5 text-blue-600"
+                />
+                <span className="text-gray-700 font-medium">No</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="isIP"
+                  checked={patientForm.isIndigenousPeople === true}
+                  onChange={() => setPatientForm({ ...patientForm, isIndigenousPeople: true })}
+                  className="w-5 h-5 text-blue-600"
+                />
+                <span className="text-gray-700 font-medium">Yes</span>
+              </label>
+            </div>
+          </div>
+
+          {/* Tribe Selection - Only shows if IP is Yes */}
+          {patientForm.isIndigenousPeople && (
+            <div className="md:col-span-2">
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Tribe / Tribo *
+              </label>
+              <select
+                value={patientForm.tribe}
+                onChange={(e) => setPatientForm({ ...patientForm, tribe: e.target.value })}
+                className="w-full px-6 py-3 border-2 border-gray-300 rounded-full focus:ring-2 focus:ring-blue-500 outline-none bg-white"
+              >
+                <option value="">Select Tribe / Pumili ng Tribo</option>
+                <option value="Mangyan">Mangyan</option>
+                <option value="Hanunuo">Hanunuo</option>
+                <option value="Buhid">Buhid</option>
+                <option value="Iraya">Iraya</option>
+                <option value="Alangan">Alangan</option>
+                <option value="Tadyawan">Tadyawan</option>
+                <option value="Ratagnon">Ratagnon</option>
+                <option value="Tawbuid">Tawbuid</option>
+                <option value="Other">Other / Iba pa</option>
+              </select>
+              
+              {/* If "Other" is selected, show text input */}
+              {patientForm.tribe === 'Other' && (
+                <input
+                  type="text"
+                  placeholder="Specify tribe / Tukuyin ang tribo"
+                  value={patientForm.tribeOther || ''}
+                  onChange={(e) => setPatientForm({ ...patientForm, tribeOther: e.target.value })}
+                  className="w-full px-6 py-3 border-2 border-gray-300 rounded-full focus:ring-2 focus:ring-blue-500 outline-none mt-2"
+                />
+              )}
+            </div>
+          )}
         </div>
       </div>
 
