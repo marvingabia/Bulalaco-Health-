@@ -14,7 +14,11 @@ import {
   Activity,
   Microscope,
   Menu,
-  X
+  X,
+  Home,
+  Info,
+  UserCircle,
+  Mail
 } from 'lucide-react';
 
 export default function Sidebar() {
@@ -38,6 +42,13 @@ export default function Sidebar() {
   const patientLinks = [
     { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard, gradient: 'from-purple-500 to-indigo-600' },
     { href: '/dashboard/my-records', label: 'My Records', icon: Activity, gradient: 'from-blue-500 to-cyan-600' },
+  ];
+
+  const infoLinks = [
+    { href: '/home', label: 'Home', icon: Home, gradient: 'from-cyan-500 to-blue-600' },
+    { href: '/about', label: 'About', icon: Info, gradient: 'from-green-500 to-teal-600' },
+    { href: '/dashboard/profile', label: 'My Profile', icon: UserCircle, gradient: 'from-pink-500 to-rose-600' },
+    { href: '/contact', label: 'Contact', icon: Mail, gradient: 'from-orange-500 to-amber-600' },
   ];
 
   const links = isAdmin ? adminLinks : patientLinks;
@@ -76,10 +87,38 @@ export default function Sidebar() {
       
       <nav className="flex-1 p-4 overflow-y-auto">
         {/* Main Navigation */}
-        <div>
+        <div className="mb-6">
           <p className="text-xs font-semibold text-gray-400 uppercase mb-3 px-2">Main Menu</p>
           <ul className="space-y-3">
             {links.map((link) => {
+              const Icon = link.icon;
+              const isActive = location.pathname === link.href;
+              
+              return (
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-full bg-gradient-to-r ${link.gradient} text-white transition-all shadow-lg hover:shadow-xl ${
+                      isActive
+                        ? 'transform scale-105 ring-2 ring-white ring-offset-2'
+                        : 'hover:scale-102'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span className="font-semibold">{link.label}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* Information Links */}
+        <div>
+          <p className="text-xs font-semibold text-gray-400 uppercase mb-3 px-2">Information</p>
+          <ul className="space-y-3">
+            {infoLinks.map((link) => {
               const Icon = link.icon;
               const isActive = location.pathname === link.href;
               
