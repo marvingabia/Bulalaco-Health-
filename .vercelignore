@@ -12,3 +12,6 @@ phpunit.xml
 *.log
 test-*.php
 react-frontend
+package.json
+package-lock.json
+vite.config.js
