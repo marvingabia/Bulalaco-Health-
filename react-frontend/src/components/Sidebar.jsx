@@ -114,33 +114,35 @@ export default function Sidebar() {
           </ul>
         </div>
 
-        {/* Information Links */}
-        <div>
-          <p className="text-xs font-semibold text-gray-400 uppercase mb-3 px-2">Information</p>
-          <ul className="space-y-3">
-            {infoLinks.map((link) => {
-              const Icon = link.icon;
-              const isActive = location.pathname === link.href;
-              
-              return (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-full bg-gradient-to-r ${link.gradient} text-white transition-all shadow-lg hover:shadow-xl ${
-                      isActive
-                        ? 'transform scale-105 ring-2 ring-white ring-offset-2'
-                        : 'hover:scale-102'
-                    }`}
-                  >
-                    <Icon className="w-5 h-5" />
-                    <span className="font-semibold">{link.label}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        {/* Information Links - Only for Patients/Staff, not Admin */}
+        {!isAdmin && (
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase mb-3 px-2">Information</p>
+            <ul className="space-y-3">
+              {infoLinks.map((link) => {
+                const Icon = link.icon;
+                const isActive = location.pathname === link.href;
+                
+                return (
+                  <li key={link.href}>
+                    <Link
+                      to={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-full bg-gradient-to-r ${link.gradient} text-white transition-all shadow-lg hover:shadow-xl ${
+                        isActive
+                          ? 'transform scale-105 ring-2 ring-white ring-offset-2'
+                          : 'hover:scale-102'
+                      }`}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span className="font-semibold">{link.label}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
       </nav>
       
       <div className="p-4 border-t border-gray-200">
